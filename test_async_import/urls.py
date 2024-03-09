@@ -23,5 +23,6 @@ from import_document.urls import urlpatterns as import_document_urlpatterns
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(import_document_urlpatterns)),
+    path("api/", include("api.urls")),
     path("silk/", include("silk.urls", namespace="silk")),
 ]

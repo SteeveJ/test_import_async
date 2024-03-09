@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django_extensions",
     # Local apps
     "import_document",
+    "api",
 ]
 
 MIDDLEWARE = [
