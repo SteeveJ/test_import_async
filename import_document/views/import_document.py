@@ -11,7 +11,7 @@ async def import_document_view(request):
         form = CSVImportForm(request.POST, request.FILES)
         if form.is_valid():
             import_csv = sync_to_async(
-                ImportDocumentService().import_csv, thread_sensitive=False
+                ImportDocumentService().import_csv, thread_sensitive=True
             )
             await asyncio.gather(import_csv(form))
             return render(request, "success.html")

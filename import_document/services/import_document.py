@@ -53,15 +53,19 @@ class ImportDocumentService:
 
         for line in csv_file:
             decoded_line = line.decode("utf-8")
-            (
-                folder_number,
-                verling_folder_number,
-                ancart,
-                channel,
-                step,
-                verling,
-                format,
-            ) = decoded_line.split(";")
+            try:
+                (
+                    folder_number,
+                    verling_folder_number,
+                    ancart,
+                    channel,
+                    step,
+                    verling,
+                    format,
+                ) = decoded_line.split(";")
+            except ValueError:
+                continue
+
             if "NUMDOS" in folder_number:
                 continue
 
@@ -82,6 +86,9 @@ class ImportDocumentService:
                     "format": format,
                 }
             )
+
+        if len(documents) == 0:
+            return
 
         with transaction.atomic():
             new_documents = self._batch_udpate_documents(list(documents.values()))
