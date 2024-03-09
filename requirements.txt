@@ -1,0 +1,5 @@
+Django==5.0.3
+pre-commit==3.6.2
+ipython==8.22.2
+ipdb==0.13.13
+django-extensions==3.2.3

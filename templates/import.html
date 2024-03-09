@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<h1 class="text-3xl font-bold mb-4">{% blocktrans %} Import Document {% endblocktrans %}</h1>
+<form action="{% url 'import_document' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-4">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" class="bg-blue-500 text-white p-2">Import</button>
+</form>
+{% endblock %}
+
