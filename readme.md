@@ -7,11 +7,6 @@ Installer les dépendances python.
 pip install -r requirements.txt
 ```
 Par default, le projet utilise une base de données sqlite.
-Je n'ai pas ignoré la db pour que vous puissiez voir les données.
-
-Le compte admin de test:
-- username: admin
-- password: vieenrose
 
 ### 2. Import Asynchrone du CSV
 
