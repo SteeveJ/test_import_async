@@ -71,19 +71,19 @@ class ImportDocumentService:
 
             if folder_number not in documents:
                 documents[folder_number] = Document(
-                    folder_number=folder_number,
-                    verling_folder_number=verling_folder_number,
-                    ancart=ancart,
-                    channel=channel,
-                    step=step,
+                    folder_number=folder_number.strip(),
+                    verling_folder_number=verling_folder_number.strip(),
+                    ancart=ancart.strip(),
+                    channel=channel.strip(),
+                    step=step.strip(),
                 )
                 supports[folder_number] = list()
 
             supports[folder_number].append(
                 {
-                    "folder_number": folder_number,
-                    "verling": verling,
-                    "format": format,
+                    "folder_number": folder_number.strip(),
+                    "verling": verling.strip(),
+                    "format": format.strip(),
                 }
             )
 
