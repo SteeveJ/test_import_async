@@ -4,7 +4,14 @@ from import_document.models import Document
 
 class DocumentDetailView(ExtendedDetailView):
     model = Document
-    fields = ("folder_number", "support", "ancart", "channel", "step")
+    fields = (
+        "folder_number",
+        "verling_folder_number",
+        "support",
+        "ancart",
+        "channel",
+        "step",
+    )
     context_object_name = "document"
     slug_field = "folder_number"
     slug_url_kwarg = "num_doss"
@@ -16,7 +23,14 @@ class DocumentDetailView(ExtendedDetailView):
 
 class DocumentListView(ExtendedListView):
     model = Document
-    fields = ("folder_number", "support", "ancart", "channel", "step")
+    fields = (
+        "folder_number",
+        "verling_folder_number",
+        "support",
+        "ancart",
+        "channel",
+        "step",
+    )
 
     def get_queryset(self):
         return Document.objects.all()

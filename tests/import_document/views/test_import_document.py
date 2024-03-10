@@ -7,9 +7,6 @@ from import_document.models import Document, Support
 
 
 class TestImportDocumentView(TestCase):
-    def SetUp(self):
-        pass
-
     def test_import_document(self):
         url = reverse("import_document")
         # load csv

@@ -1,5 +1,17 @@
 Django==5.0.3
+
+# git
 pre-commit==3.6.2
+
+# dev
 ipython==8.22.2
 ipdb==0.13.13
 django-extensions==3.2.3
+django-silk==5.1.0
+
+# testing
+pytest==8.1.1
+pytest-cov==4.1.0
+pytest-django==4.8.0
+snapshottest==0.6.0
+django-factory-boy==1.0.0

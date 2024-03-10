@@ -23,6 +23,8 @@ def serialize_queryset(queryset, fields: list[str]) -> dict[str, any]:
 
 
 def get_related_objects(model, objects: list, data_to_json: dict[str, any]) -> dict:
+    if len(objects) == 0:
+        return data_to_json
     for related in model._meta.get_fields():
         if related.get_internal_type() == "ForeignKey":
             data_to_json[related.name] = []

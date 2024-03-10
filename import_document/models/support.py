@@ -6,9 +6,16 @@ class Support(models.Model):
     E = "E"
     F = "F"
     E_F = "E/F"
+    E_F_D = "E/F/D"
+
     PDFC = "PDFC"
     PDFI = "PDFI"
     XML = "XML"
+    COUV_JPEG_BQ = "COUV_JPEG_BQ"
+    COUV_JPEG_HQ = "COUV_JPEG_HQ"
+    PDFRL = "PDFRL"
+    PDF_POD = "PDF_POD"
+    XMLRL = "XMLRL"
 
     VERLING_CHOICES = (
         (E, "E"),
@@ -19,13 +26,18 @@ class Support(models.Model):
         (PDFC, "PDFC"),
         (PDFI, "PDFI"),
         (XML, "XML"),
+        (COUV_JPEG_BQ, "COUV_JPEG_BQ"),
+        (COUV_JPEG_HQ, "COUV_JPEG_HQ"),
+        (PDFRL, "PDFRL"),
+        (PDF_POD, "PDF_POD"),
+        (XMLRL, "XMLRL"),
     )
 
     folder_number = models.ForeignKey(
         "import_document.Document",
         on_delete=models.CASCADE,
         related_name="support_folder_number",
-        verbose_name=_("Verling document number"),
+        verbose_name=_("Folder number"),
     )
     verling = models.CharField(
         max_length=3, choices=VERLING_CHOICES, blank=True, verbose_name=_("Verling")

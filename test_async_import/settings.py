@@ -143,3 +143,5 @@ SHELL_PLUS_PRINT_SQL = True
 SHELL_PLUS_PRE_IMPORTS = [
     ("import_document.models", "*"),
 ]
+
+TEST_RUNNER = "snapshottest.django.TestRunner"
