@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-09 08:29+0100\n"
+"POT-Creation-Date: 2024-03-10 13:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: import_document/forms/import_file.py:7
-msgid "Select a CSV file"
-msgstr ""
-
-#: import_document/forms/import_file.py:17
+#: import_document/constants.py:3
 msgid "Only CSV files are allowed"
 msgstr ""
 
-#: import_document/models/document.py:30
+#: import_document/forms/import_file.py:9
+msgid "Select a CSV file"
+msgstr ""
+
+#: import_document/models/document.py:14
 msgid "folder number"
 msgstr ""
 
-#: import_document/models/document.py:31
-msgid "Verling document number"
+#: import_document/models/document.py:17
+msgid "Verling folder number"
 msgstr ""
 
-#: import_document/models/document.py:32
+#: import_document/models/document.py:19
 msgid "Ancart"
 msgstr ""
 
-#: import_document/models/document.py:33
+#: import_document/models/document.py:21
 msgid "Channel"
 msgstr ""
 
-#: import_document/models/document.py:34
+#: import_document/models/document.py:23
 msgid "Step"
 msgstr ""
 
-#: import_document/models/document.py:35
+#: import_document/models/support.py:30
+msgid "Folder number"
+msgstr ""
+
+#: import_document/models/support.py:33
 msgid "Verling"
 msgstr ""
 
-#: import_document/models/document.py:36
+#: import_document/models/support.py:36
 msgid "Format"
 msgstr ""
 
