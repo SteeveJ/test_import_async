@@ -1,4 +1,4 @@
-from api.resources import ExtendedDetailView
+from api.resources import ExtendedDetailView, ExtendedListView
 from import_document.models import Document
 
 
@@ -12,3 +12,11 @@ class DocumentDetailView(ExtendedDetailView):
 
     def get_queryset(self):
         return Document.objects.filter(folder_number=self.kwargs["num_doss"])
+
+
+class DocumentListView(ExtendedListView):
+    model = Document
+    fields = ("folder_number", "support", "ancart", "channel", "step")
+
+    def get_queryset(self):
+        return Document.objects.all()
